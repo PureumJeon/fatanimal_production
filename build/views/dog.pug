@@ -1,0 +1,107 @@
+extends layouts/main
+
+block content
+        main
+            .input_container
+                .input_column
+                    span.input_label 이름
+                    input.input_text(type="text" id="name" name="name" placeholder="                                                ")
+
+                .input_column
+                    span.input_label 현재체중
+                    div.input_label2
+                        input.input_text(type="number" step="0.05" value="5" name="currentWeight")
+                        span kg 
+
+                .input_column_q
+                    div.input_q_1
+                        span.input_label 비만도
+                        div
+                            select(name="bcs")
+                                option(value="1") 정상체형
+                                option(value="1.1") 정상~과체중
+                                option(value="1.2") 과체중
+                                option(value="1.3") 과체중~비만
+                                option(value="1.4") 비만             
+                    div
+                        div#dogModalBtn
+                            i(class="fas fa-question-circle") 
+                        .modal#dogModal
+                                    .modal-content
+                                        span#closebtn.close &times;
+                                        img.bmi(src='./static/img/dog.jpg')
+                                    
+
+                .input_column_q
+                    .input_q_1
+                        span.input_label 사료 칼로리 (1kg, kcal)
+                        div.input_label2
+                            input.input_text(type="number" step="1" value="3500" name="food_kcal")
+                            span kcal
+                    div
+                        div.popup
+                            i(class="fas fa-question-circle" id='dogPopDiv2')
+                                span.popuptext#dogPopText2 성견용 3900 / 다이어트 3500 / 시니어 3600        
+
+                .input_column_q
+                    .input_q_1
+                        span.input_label 캔 칼로리 (1캔, kcal) 
+                        div.input_label2
+                            input.input_text(type="number" step="1" value="85" name="can_kcal")
+                            span kcal
+                    div
+                        span.popup
+                            i(class="fas fa-question-circle" id='dogPopDiv3')
+                                span.popuptext#dogPopText3 100g 캔 - 85kcal            
+            
+
+            .result_container
+                .result_text
+                    span#js_result_name.point 멍멍이
+                    span 의 목표 체중은 
+                    span#js_result_weight_1.point 0
+                    span kg 감량한 
+                    span#js_result_weight_2.point 5
+                    span kg 입니다. 
+                    </br> 
+                    span 1주일에 
+                    span#js_result_week_goal.point 0
+                    span kg씩 
+                    span#js_result_week.point 0
+                    span 주간 다이어트가 필요해요 🔥
+
+                    </br> 
+                    span 간식을 포함하여 하루에 
+                    span#js_result_kcal.point 234
+                    span kcal를 급여하고
+                    </br> 
+                    span#js_result_water.point 300
+                    span ml의 음수량을 채워주세요! 💧</br>
+            
+                .result_amount
+                    div
+                        h2.point  일일 급여량
+                    .result_amount_food
+                        div.result_amount_food_1
+                            div
+                                span.title 캔
+                            div.point 
+                                input.input_text(type="number" min="0" value="0" step="0.25" name="can_amount" id="can_amount")
+                                span 개
+                        div
+                            span +
+                        div.result_amount_food_1
+                            div
+                                span.title 사료
+                            div.point 
+                                span#js_result_food 66.86
+                                span g
+                    div
+                        span.result_ref * 캔 급여량을 변경하면 자동으로 사료 급여량이 계산됩니다.
+  
+
+
+
+
+
+

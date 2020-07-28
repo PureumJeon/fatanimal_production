@@ -1,0 +1,36 @@
+{
+  "name": "fatanimalsproduction",
+  "version": "1.0.0",
+  "description": "Fat Cat / Fat Dog Diet Website (JS)_production",
+  "main": "init.js",
+  "scripts": {
+    "start": "node build/init.js"
+  },
+  "author": "Pureum Jeon",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.4",
+    "babel-loader": "^8.1.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.6.5",
+    "cross-spawn": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "helmet": "^3.22.1",
+    "heroku-config": "^1.5.4",
+    "jsdom": "^16.2.2",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "12.18.3"
+  }
+}
